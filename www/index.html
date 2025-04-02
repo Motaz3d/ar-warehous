@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>📦 المستودعات العربية</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://unpkg.com/html5-qrcode"></script>
+</head>
+<body>
+  <header>
+    <h1>📦 المستودعات العربية</h1>
+    <p>نظام تتبع المنتجات عبر الباركود - إدخال وإخراج</p>
+  </header>
+
+  <main>
+    <section class="input-section">
+      <label for="barcodeInput">🔍 أدخل أو امسح الباركود:</label>
+      <input type="text" id="barcodeInput" placeholder="رقم الباركود" autofocus />
+      <div class="buttons">
+        <button id="inButton">📥 إدخال</button>
+        <button id="outButton">📤 إخراج</button>
+      </div>
+    </section>
+    <div class="print-button">
+        <button onclick="window.print()">🖨️ طباعة التقرير</button>
+    </div>
+    <section>
+        <h2>📷 مسح بالكاميرا</h2>
+        <div id="reader" style="width: 300px;"></div>
+    </section>
+
+    <section class="stats">
+      <p>📥 عدد الإدخالات: <span id="inCount">0</span></p>
+      <p>📤 عدد الإخراجات: <span id="outCount">0</span></p>
+    </section>
+
+    <section class="log-section">
+      <h2>📚 السجل</h2>
+      <ul id="logList"></ul>
+    </section>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

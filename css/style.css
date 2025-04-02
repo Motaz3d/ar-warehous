@@ -1,0 +1,182 @@
+/* 🌐 إعدادات عامة */
+body {
+    font-family: 'Arial', sans-serif;
+    direction: rtl;
+    background-color: #f4f6f9;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* 🧾 رأس الصفحة */
+  header {
+    background-color: #007bff;
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+  }
+  
+  header p {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+  }
+  
+  /* 🧱 المحتوى الرئيسي */
+  main {
+    max-width: 600px;
+    margin: 2rem auto;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.07);
+  }
+  
+  /* 🔢 قسم الإدخال */
+  .input-section label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  
+  .input-section input {
+    width: 100%;
+    padding: 0.6rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* 🎛️ أزرار الإدخال/الإخراج */
+  .buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 1rem;
+  }
+  
+  button {
+    flex: 1;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    transition: background-color 0.3s ease;
+  }
+  
+  #inButton {
+    background-color: #28a745;
+  }
+  
+  #outButton {
+    background-color: #dc3545;
+  }
+  
+  button:hover {
+    opacity: 0.9;
+  }
+  
+  /* 🧮 الإحصائيات */
+  .stats {
+    background: #f1f1f1;
+    padding: 1rem;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: #333;
+  }
+  
+  /* 🧾 السجل */
+  .log-section h2 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    color: #444;
+  }
+  
+  .log-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .log-section li {
+    background-color: #e9ecef;
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    border-radius: 5px;
+    font-size: 0.95rem;
+    color: #222;
+  }
+  
+  /* 🖨️ زر الطباعة */
+  .print-button {
+    margin: 1rem 0;
+    text-align: center;
+  }
+  
+  .print-button button {
+    background-color: #6c757d;
+    color: white;
+  }
+  
+  /* 📷 ماسح الباركود */
+  #reader {
+    margin: 1rem auto;
+    max-width: 320px;
+    border: 2px dashed #007bff;
+    border-radius: 8px;
+    padding: 1rem;
+  }
+  
+  /* 🖨️ تنسيق الطباعة */
+  @media print {
+    body {
+      background: white;
+      color: black;
+    }
+  
+    header, .input-section, .buttons, .print-button, #reader {
+      display: none;
+    }
+  
+    main {
+      margin: 0;
+      padding: 0;
+      box-shadow: none;
+    }
+  
+    .log-section {
+      margin-top: 2rem;
+    }
+  
+    .log-section li {
+      font-size: 1.1rem;
+      padding: 1rem;
+    }
+  }
+
+  :root {
+    --primary: #007bff;
+    --success: #28a745;
+    --danger: #dc3545;
+    --background: #f4f6f9;
+  }
+  
+  body {
+    background-color: var(--background);
+  }
+  
+  #inButton {
+    background-color: var(--success);
+  }
+  
+  #outButton {
+    background-color: var(--danger);
+  }
